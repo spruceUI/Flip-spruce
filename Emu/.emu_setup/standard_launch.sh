@@ -4,7 +4,7 @@
 
 ##### DEFINE BASE VARIABLES #####
 
-. /mnt/SDCARD/spruce/scripts/helperFunctions.sh
+# . /mnt/SDCARD/spruce/scripts/helperFunctions.sh
 # . /mnt/SDCARD/spruce/bin/Syncthing/syncthingFunctions.sh
 log_message "-----Launching Emulator-----" -v
 log_message "trying: $0 $@" -v
@@ -98,7 +98,7 @@ fi
 #    fi
 # fi
 
-flag_add 'emulator_launched'
+# flag_add 'emulator_launched'
 
 ##### LAUNCH STUFF #####
 
@@ -106,158 +106,156 @@ flag_add 'emulator_launched'
 # kill -19 $(pgrep -f simple_mode_watchdog.sh) 2>/dev/null
 
 # we sanitise the rom path
-ROM_FILE="$(readlink -f "$1")"
+# ROM_FILE="$(readlink -f "$1")"
 
-case $EMU_NAME in
-	"MEDIA")
-		export HOME=$EMU_DIR
-		export PATH=$EMU_DIR/bin:$PATH
-		export LD_LIBRARY_PATH=$EMU_DIR/libs:/usr/miyoo/lib:/usr/lib:$LD_LIBRARY_PATH
-		cd $EMU_DIR
-		ffplay -vf transpose=2 -fs -i "$ROM_FILE"
-		;;
+# case $EMU_NAME in
+# 	"MEDIA")
+# 		export HOME=$EMU_DIR
+#		export PATH=$EMU_DIR/bin:$PATH
+#		export LD_LIBRARY_PATH=$EMU_DIR/libs:/usr/miyoo/lib:/usr/lib:$LD_LIBRARY_PATH
+#		cd $EMU_DIR
+#		ffplay -vf transpose=2 -fs -i "$ROM_FILE"
+#		;;
 
-	"NDS")
+#	"NDS")
 		# the SDL library is hard coded to open ttyS0 for joystick raw input 
 		# so we pause joystickinput and create soft link to serial port
-		killall -q -STOP joystickinput
-        ln -s /dev/ttyS2 /dev/ttyS0
+#		killall -q -STOP joystickinput
+#       ln -s /dev/ttyS2 /dev/ttyS0
 
-		cd $EMU_DIR
-		if [ ! -f "/tmp/.show_hotkeys" ]; then
-			touch /tmp/.show_hotkeys
-			LD_LIBRARY_PATH=libs2:/usr/miyoo/lib ./show_hotkeys
-		fi
-		export HOME=$EMU_DIR
-		export LD_LIBRARY_PATH=libs:/usr/miyoo/lib:/usr/lib
-		export SDL_VIDEODRIVER=mmiyoo
-		export SDL_AUDIODRIVER=mmiyoo
-		export EGL_VIDEODRIVER=mmiyoo
-		cd $EMU_DIR
-		if [ -f 'libs/libEGL.so' ]; then
-			rm -rf libs/libEGL.so
-			rm -rf libs/libGLESv1_CM.so
-			rm -rf libs/libGLESv2.so
-		fi
-		./drastic "$ROM_FILE"
-		sync
+#		cd $EMU_DIR
+#		if [ ! -f "/tmp/.show_hotkeys" ]; then
+#			touch /tmp/.show_hotkeys
+#			LD_LIBRARY_PATH=libs2:/usr/miyoo/lib ./show_hotkeys
+#		fi
+#		export HOME=$EMU_DIR
+#		export LD_LIBRARY_PATH=libs:/usr/miyoo/lib:/usr/lib
+#		export SDL_VIDEODRIVER=mmiyoo
+#		export SDL_AUDIODRIVER=mmiyoo
+#		export EGL_VIDEODRIVER=mmiyoo
+#		cd $EMU_DIR
+#		if [ -f 'libs/libEGL.so' ]; then
+#			rm -rf libs/libEGL.so
+#			rm -rf libs/libGLESv1_CM.so
+#			rm -rf libs/libGLESv2.so
+#		fi
+#		./drastic "$ROM_FILE"
+#		sync
 
         # remove soft link and resume joystickinput
-        rm /dev/ttyS0
-		killall -q -CONT joystickinput
+ #       rm /dev/ttyS0
+#		killall -q -CONT joystickinput
+#		;;
 
-		;;
-
-	"OPENBOR")
-		export LD_LIBRARY_PATH=lib:/usr/miyoo/lib:/usr/lib
-		export HOME=$EMU_DIR
-		cd $HOME
-		if [ "$GAME" == "Final Fight LNS.pak" ]; then
-			./OpenBOR_mod "$ROM_FILE"
-		else
-			./OpenBOR_new "$ROM_FILE"
-		fi
-		sync
-		;;
+#	"OPENBOR")
+#		export LD_LIBRARY_PATH=lib:/usr/miyoo/lib:/usr/lib
+#		export HOME=$EMU_DIR
+#		cd $HOME
+#		if [ "$GAME" == "Final Fight LNS.pak" ]; then
+#			./OpenBOR_mod "$ROM_FILE"
+#		else
+#			./OpenBOR_new "$ROM_FILE"
+#		fi
+#		sync
+#		;;
 	
-	"PICO8")
+#	"PICO8")
         # send signal USR2 to joystickinput to switch to KEYBOARD MODE
         # this allows joystick to be used as DPAD in MainUI
-        killall -q -USR2 joystickinput
+#       killall -q -USR2 joystickinput
 
-		export HOME="$EMU_DIR"
-		export PATH="$HOME"/bin:$PATH:"/mnt/SDCARD/BIOS"
+#		export HOME="$EMU_DIR"
+#		export PATH="$HOME"/bin:$PATH:"/mnt/SDCARD/BIOS"
 
-		P8_DIR="/mnt/SDCARD/Emu/PICO8/.lexaloffle/pico-8"
-		CONTROL_PROFILE="$(setting_get "pico8_control_profile")"
+#		P8_DIR="/mnt/SDCARD/Emu/PICO8/.lexaloffle/pico-8"
+#		CONTROL_PROFILE="$(setting_get "pico8_control_profile")"
 
-		if [ "$CONTROL_PROFILE" = "Steward" ]; then
-			export LD_LIBRARY_PATH="$HOME"/lib-stew:$LD_LIBRARY_PATH
-		else
-			export LD_LIBRARY_PATH="$HOME"/lib-cine:$LD_LIBRARY_PATH
-		fi
+#		if [ "$CONTROL_PROFILE" = "Steward" ]; then
+#			export LD_LIBRARY_PATH="$HOME"/lib-stew:$LD_LIBRARY_PATH
+#		else
+#			export LD_LIBRARY_PATH="$HOME"/lib-cine:$LD_LIBRARY_PATH
+#		fi
 
-		case "$CONTROL_PROFILE" in
-			"Doubled") 
-				cp -f "$P8_DIR/sdl_controllers.facebuttons" "$P8_DIR/sdl_controllers.txt"
-				;;
-			"One-handed")
-				cp -f "$P8_DIR/sdl_controllers.onehand" "$P8_DIR/sdl_controllers.txt"
-				;;
-			"Racing")
-				cp -f "$P8_DIR/sdl_controllers.racing" "$P8_DIR/sdl_controllers.txt"
-				;;
-			"Doubled 2") 
-				cp -f "$P8_DIR/sdl_controllers.facebuttons_reverse" "$P8_DIR/sdl_controllers.txt"
-				;;
-			"One-handed 2")
-				cp -f "$P8_DIR/sdl_controllers.onehand_reverse" "$P8_DIR/sdl_controllers.txt"
-				;;
-			"Racing 2")
-				cp -f "$P8_DIR/sdl_controllers.racing_reverse" "$P8_DIR/sdl_controllers.txt"
-				;;
-		esac
+#		case "$CONTROL_PROFILE" in
+#			"Doubled") 
+#				cp -f "$P8_DIR/sdl_controllers.facebuttons" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#			"One-handed")
+#				cp -f "$P8_DIR/sdl_controllers.onehand" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#			"Racing")
+#				cp -f "$P8_DIR/sdl_controllers.racing" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#			"Doubled 2") 
+#				cp -f "$P8_DIR/sdl_controllers.facebuttons_reverse" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#			"One-handed 2")
+#				cp -f "$P8_DIR/sdl_controllers.onehand_reverse" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#			"Racing 2")
+#				cp -f "$P8_DIR/sdl_controllers.racing_reverse" "$P8_DIR/sdl_controllers.txt"
+#				;;
+#		esac
 
-		if setting_get "pico8_stretch"; then
-			SCALING="-draw_rect 0,0,480,640"
-		else
-			SCALING=""
-		fi
+#		if setting_get "pico8_stretch"; then
+#			SCALING="-draw_rect 0,0,480,640"
+#		else
+#			SCALING=""
+#		fi
 
-		export SDL_VIDEODRIVER=mali
-		export SDL_JOYSTICKDRIVER=a30
-		cd "$HOME"
-		sed -i 's|^transform_screen 0$|transform_screen 135|' "$HOME/.lexaloffle/pico-8/config.txt"
-		if [ "${GAME##*.}" = "splore" ]; then
-			pico8_dyn -splore -width 640 -height 480 -root_path "/mnt/SDCARD/Roms/PICO8/" $SCALING
-		else
-			pico8_dyn -width 640 -height 480 -scancodes -run "$ROM_FILE" $SCALING
-		fi
-		sync
+#		export SDL_VIDEODRIVER=mali
+#		export SDL_JOYSTICKDRIVER=a30
+#		cd "$HOME"
+#		sed -i 's|^transform_screen 0$|transform_screen 135|' "$HOME/.lexaloffle/pico-8/config.txt"
+#		if [ "${GAME##*.}" = "splore" ]; then
+#			pico8_dyn -splore -width 640 -height 480 -root_path "/mnt/SDCARD/Roms/PICO8/" $SCALING
+#		else
+#			pico8_dyn -width 640 -height 480 -scancodes -run "$ROM_FILE" $SCALING
+#		fi
+#		sync
 
         # send signal USR1 to joystickinput to switch to ANALOG MODE
-        killall -q -USR1 joystickinput
+#        killall -q -USR1 joystickinput
+#		;;
 
-		;;
+#	"PORTS")
+#		PORTS_DIR=/mnt/SDCARD/Roms/PORTS
+#		cd $PORTS_DIR
+#		/bin/sh "$ROM_FILE"
+#		;;
 
-	"PORTS")
-		PORTS_DIR=/mnt/SDCARD/Roms/PORTS
-		cd $PORTS_DIR
-		/bin/sh "$ROM_FILE"
-		;;
-
-	"PSP")
-		if [ "$CORE" = "standalone" ]; then
+#	"PSP")
+#		if [ "$CORE" = "standalone" ]; then
 
 			# move .config folder into place in case emu setup never ran
-			if [ ! -d "/mnt/SDCARD/.config" ]; then
-				if [ -d "$SETUP_DIR/.config" ]; then
-					cp -rf "$SETUP_DIR/.config" "/mnt/SDCARD/.config" && log_message "emu_setup.sh: copied .config folder to root of SD card."
-				else
-					log_message "emu_setup.sh: WARNING!!! No .config folder found!"
-				fi
-			else
-				log_message "emu_setup.sh: .config folder already in place at SD card root."
-			fi
+#			if [ ! -d "/mnt/SDCARD/.config" ]; then
+#				if [ -d "$SETUP_DIR/.config" ]; then
+#					cp -rf "$SETUP_DIR/.config" "/mnt/SDCARD/.config" && log_message "emu_setup.sh: copied .config folder to root of SD card."
+#				else
+#					log_message "emu_setup.sh: WARNING!!! No .config folder found!"
+#				fi
+#			else
+#				log_message "emu_setup.sh: .config folder already in place at SD card root."
+#			fi
 
-			cd $EMU_DIR
-			export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$EMU_DIR
-			export HOME=/mnt/SDCARD
+#			cd $EMU_DIR
+#			export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$EMU_DIR
+#			export HOME=/mnt/SDCARD
 			
-			./PPSSPPSDL "$ROM_FILE"
-		else
-			if setting_get "expertRA"; then
-				export RA_BIN="retroarch"
-			else
-				export RA_BIN="ra32.miyoo"
-			fi
-			RA_DIR="/mnt/SDCARD/RetroArch"
-			cd "$RA_DIR"
-			HOME="$RA_DIR/" "$RA_DIR/$RA_BIN" -v -L "$RA_DIR/.retroarch/cores/${CORE}_libretro.so" "$ROM_FILE"
-		fi
-		;;
+#			./PPSSPPSDL "$ROM_FILE"
+#		else
+#			if setting_get "expertRA"; then
+#				export RA_BIN="retroarch"
+#			else
+#				export RA_BIN="ra32.miyoo"
+#			fi
+#			RA_DIR="/mnt/SDCARD/RetroArch"
+#			cd "$RA_DIR"
+#			HOME="$RA_DIR/" "$RA_DIR/$RA_BIN" -v -L "$RA_DIR/.retroarch/cores/${CORE}_libretro.so" "$ROM_FILE"
+#		fi
+#		;;
 	
-	*)
+#	*)
 
 		# Set up N64 controller profiles
 #		if [ $EMU_NAME = "N64" ]; then
@@ -272,11 +270,11 @@ case $EMU_NAME in
 #			cp -f "${SRC}/${PROFILE}.rmp" "${DST}/${MUPEN}/${MUPEN}.rmp"
 #		fi
 
-		if setting_get "expertRA" || [ "$CORE" = "km_parallel_n64_xtreme_amped_turbo" ]; then
-			export RA_BIN="retroarch"
-		else
+#		if setting_get "expertRA" || [ "$CORE" = "km_parallel_n64_xtreme_amped_turbo" ]; then
+#			export RA_BIN="retroarch"
+#		else
 			export RA_BIN="ra64.miyoo"
-		fi
+#		fi
 		RA_DIR="/mnt/SDCARD/RetroArch"
 		cd "$RA_DIR"
 
