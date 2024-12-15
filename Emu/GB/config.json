@@ -10,13 +10,21 @@
     "hidebios":0,
     "extlist":"gb|gbc|zip",
     "launchlist": [
-        {
-            "name": "GamBatte",
-            "launch": "launch.sh"
-        },
-        {
-            "name": "mGBA",
-            "launch": "launch_mgba.sh"
-        }
+    {
+      "name": "Jump to random GameBoy game",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/aleatorio.sh"
+    },
+    {
+      "name": "Emu Core: (✓GAMBATTE)-mgba",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/core/mgba.sh"
+    },
+    {
+      "name": "Save current launch settings as per-game override",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/set_override.sh"
+    },
+    {
+      "name": "Remove per-game launch setting override",
+      "launch": "/mnt/SDCARD/Emu/.emu_setup/remove_override.sh"
+    }
     ]
 }
