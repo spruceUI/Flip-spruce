@@ -6,8 +6,8 @@
 
 # . /mnt/SDCARD/spruce/scripts/helperFunctions.sh
 # . /mnt/SDCARD/spruce/bin/Syncthing/syncthingFunctions.sh
-log_message "-----Launching Emulator-----" -v
-log_message "trying: $0 $@" -v
+# log_message "-----Launching Emulator-----" -v
+# log_message "trying: $0 $@" -v
 export EMU_NAME="$(echo "$1" | cut -d'/' -f5)"
 export GAME="$(basename "$1")"
 export EMU_DIR="/mnt/SDCARD/Emu/${EMU_NAME}"
@@ -22,21 +22,21 @@ export OVR_FILE="$OVR_DIR/$EMU_NAME/$GAME.opt"
 
 if [ -f "$DEF_FILE" ]; then
 	. "$DEF_FILE"
-else
-	log_message "WARNING: Default .opt file not found for $EMU_NAME!" -v
+# else
+#	log_message "WARNING: Default .opt file not found for $EMU_NAME!" -v
 fi
 
 if [ -f "$OPT_FILE" ]; then
 	. "$OPT_FILE"
-else
-	log_message "WARNING: System .opt file not found for $EMU_NAME!" -v
+# else
+#	log_message "WARNING: System .opt file not found for $EMU_NAME!" -v
 fi
 
 if [ -f "$OVR_FILE" ]; then
 	. "$OVR_FILE";
-	log_message "Launch setting OVR_FILE detected @ $OVR_FILE" -v
-else
-	log_message "No launch OVR_FILE detected. Using current system settings." -v
+#	log_message "Launch setting OVR_FILE detected @ $OVR_FILE" -v
+#else
+#	log_message "No launch OVR_FILE detected. Using current system settings." -v
 fi
 
 ##### SET CPU MODE #####
