@@ -1,0 +1,11 @@
+{
+"label":"Game Gear",
+"icon": "/mnt/SDCARD/Themes/SPRUCE/icons/gg.png",
+"iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/gg.png",
+"launch":"launch.sh",
+"rompath":"../../Roms/GG",
+"imgpath":"../../Roms/Imgs",
+"useswap":1,
+"shortname":0,
+"hidebios":1
+}

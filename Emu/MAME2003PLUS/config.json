@@ -1,0 +1,12 @@
+{
+"label":"MAME",
+"icon": "/mnt/SDCARD/Themes/SPRUCE/icons/mame.png",
+"iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/mame.png",
+"launch":"launch.sh",
+"rompath":"../../Roms/MAME2003PLUS",
+"imgpath":"../../Roms/MAME2003PLUS/Imgs",
+"useswap":1,
+"shortname":1,
+"hidebios":1,
+"extlist":"zip"
+}

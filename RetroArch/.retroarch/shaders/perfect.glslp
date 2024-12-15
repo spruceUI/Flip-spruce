@@ -1,0 +1,2 @@
+#reference "shaders_glsl/interpolation/bandlimit-pixel.glslp"
+SMOOTHNESS = "0.300000"

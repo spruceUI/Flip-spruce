@@ -1,0 +1,785 @@
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   685441024 Bytes (   653 MB )
+ Used Ram:     1453056 Bytes (     1 MB )
+
+debug:nativeWidth, nativeHeight, bpp, Hz  640, 480, 32, 60
+OpenBoR v3.0 Build 7142 (commit hash: 7f6f175), Compile Date: Jun  5 2024
+
+Game Selected: /media/sdcard0/Emu/OPENBOR/../../Roms/OPENBOR/午夜杀生X.pak
+
+Loaded mapping for X360 Controller
+Loaded mapping for Keyboard
+FileCaching System Init......	Enabled
+Initializing video............
+Reading video settings from 'data/video.txt'.
+
+Colordepth is depreciated. All modules are displayed with a 32bit color screen.
+
+Initialized video.............	320x240 (Mode: 0)
+
+Loading menu.txt.............	Done!
+Loading fonts................	1 2 3 4 5 Done!
+Timer init...................	Done!
+Initialize Sound..............	
+Loading sprites..............	Done!
+Loading level order..........	Done!
+Loading model constants......	Done!
+Loading script settings......	Done!
+Loading scripts..............	Done!
+Loading models...............
+
+Controller or joystick hotplugged: SDL device ID=0
+X360 Controller (device #0, SDL ID 0) is a game controller.
+Hotplugged controller set as device #0
+Cacheing 'chris' from data/chars/chris/chris.txt
+Cacheing 'jack' from data/chars/jack/jack.txt
+Cacheing 'jasmin' from data/chars/jasmin/jasmin.txt
+Cacheing 'chris12' from data/chars/chris/chris12.txt
+Cacheing 'chris11' from data/chars/chris/chris11.txt
+Cacheing 'chris10' from data/chars/chris/chris10.txt
+Cacheing 'chris8' from data/chars/chris/chris8.txt
+Cacheing 'chris7' from data/chars/chris/chris7.txt
+Cacheing 'chris6' from data/chars/chris/chris6.txt
+Cacheing 'chris5' from data/chars/chris/chris5.txt
+Cacheing 'chris4' from data/chars/chris/chris4.txt
+Cacheing 'chris3' from data/chars/chris/chris3.txt
+Cacheing 'chris2' from data/chars/chris/chris2.txt
+Cacheing 'jas10' from data/chars/jasmin/jas10.txt
+Cacheing 'jas11' from data/chars/jasmin/jas11.txt
+Cacheing 'jas12' from data/chars/jasmin/jas12.txt
+Cacheing 'jas8' from data/chars/jasmin/jas8.txt
+Cacheing 'jas7' from data/chars/jasmin/jas7.txt
+Cacheing 'jas6' from data/chars/jasmin/jas6.txt
+Cacheing 'jas5' from data/chars/jasmin/jas5.txt
+Cacheing 'jas4' from data/chars/jasmin/jas4.txt
+Cacheing 'jas3' from data/chars/jasmin/jas3.txt
+Cacheing 'jas2' from data/chars/jasmin/jas2.txt
+Cacheing 'jack11' from data/chars/jack/jack11.txt
+Cacheing 'jack10' from data/chars/jack/jack10.txt
+Cacheing 'jack12' from data/chars/jack/jack12.txt
+Cacheing 'jack8' from data/chars/jack/jack8.txt
+Cacheing 'jack7' from data/chars/jack/jack7.txt
+Cacheing 'jack6' from data/chars/jack/jack6.txt
+Cacheing 'jack5' from data/chars/jack/jack5.txt
+Cacheing 'jack4' from data/chars/jack/jack4.txt
+Cacheing 'jack3' from data/chars/jack/jack3.txt
+Cacheing 'jack2' from data/chars/jack/jack2.txt
+Cacheing 'Flash' from data/chars/misc/flash.txt
+Cacheing 'Flashe' from data/chars/misc/flashe.txt
+Cacheing 'Flashf' from data/chars/misc/flashf.txt
+Cacheing 'bblod' from data/chars/misc/bblod.txt
+Cacheing 'cFlash' from data/chars/misc/cflash.txt
+Cacheing 'granat' from data/chars/misc/granat.txt
+Cacheing 'blood' from data/chars/misc/blood.txt
+Cacheing 'blood3' from data/chars/misc/blood3.txt
+Cacheing 'bFlash' from data/chars/misc/bflash.txt
+Cacheing 'dFlash' from data/chars/misc/dflash.txt
+Cacheing 'dust' from data/chars/misc/dust.txt
+Cacheing 'zyg' from data/chars/zombie2/zyg.txt
+Cacheing 'zyg2' from data/chars/zombie2/zyg2.txt
+Cacheing 'ztrso' from data/chars/zombie/ztrso.txt
+Cacheing 'zhead' from data/chars/zombie3/zhead.txt
+Cacheing 'zhead2' from data/chars/zombie3/zhead2.txt
+Cacheing 'zhead3' from data/chars/zombie3/zhead3.txt
+Cacheing 'zbrain' from data/chars/zombie/zbrain.txt
+Cacheing 'Flash2' from data/chars/misc/flash2.txt
+Cacheing 'dst' from data/chars/misc/dst.txt
+Cacheing 'dstfl' from data/chars/bosf/dstfl.txt
+Cacheing 'tdfl' from data/chars/misc/tdfl.txt
+Cacheing 'tdfl2' from data/chars/misc/tdfl2.txt
+Cacheing 'spbg' from data/chars/bosf/spbg.txt
+Cacheing 'aura1' from data/chars/misc/aura1.txt
+Cacheing 'aura2' from data/chars/misc/aura2.txt
+Cacheing 'aura3' from data/chars/misc/aura3.txt
+Cacheing 'chspmg' from data/chars/chris/chspmg.txt
+Cacheing 'chrspa' from data/chars/bosf/chrspa.txt
+Cacheing 'chrspb' from data/chars/bosf/chrspb.txt
+Cacheing 'chrspc' from data/chars/bosf/chrspc.txt
+Cacheing 'chrspd' from data/chars/bosf/chrspd.txt
+Cacheing 'chrspe' from data/chars/bosf/chrspe.txt
+Cacheing 'jkpmg' from data/chars/jack/jkpmg.txt
+Cacheing 'jkspa' from data/chars/bosf/jkspa.txt
+Cacheing 'jkspb' from data/chars/bosf/jkspb.txt
+Cacheing 'jkspd' from data/chars/bosf/jkspd.txt
+Cacheing 'jkspe' from data/chars/bosf/jkspe.txt
+Cacheing 'jaspmg' from data/chars/jasmin/jaspmg.txt
+Cacheing 'jasspa' from data/chars/bosf/jasspa.txt
+Cacheing 'jasspb2' from data/chars/bosf/jasspb2.txt
+Cacheing 'jasspc' from data/chars/bosf/jasspc.txt
+Cacheing 'jasspc2' from data/chars/bosf/jasspc2.txt
+Cacheing 'slamfl' from data/chars/chris/slamfl.txt
+Cacheing 'smash' from data/chars/chris/smash.txt
+Cacheing 'smashbg' from data/chars/chris/smashbg.txt
+Cacheing 'shdym' from data/chars/chris/shdym.txt
+Cacheing 'shdym3' from data/chars/chris/shdym3.txt
+Cacheing 'shdym4' from data/chars/chris/shdym4.txt
+Cacheing 'shdym6' from data/chars/chris/shdym6.txt
+Cacheing 'shbul' from data/chars/chris/shbul.txt
+Cacheing 'shbul4' from data/chars/chris/shbul4.txt
+Cacheing 'shbul6' from data/chars/chris/shbul6.txt
+Cacheing 'shel' from data/chars/misc/shel.txt
+Cacheing 'batb' from data/chars/misc/batb.txt
+Cacheing 'axeb' from data/chars/misc/axeb.txt
+Cacheing 'brlknf' from data/chars/chris/chrbrl/brlknf.txt
+Cacheing 'brlknf2' from data/chars/chris/chrbrl/brlknf2.txt
+Cacheing 'brlknf3' from data/chars/chris/chrbrl/brlknf3.txt
+Cacheing 'cape' from data/chars/chris/cape.txt
+Cacheing 'cape2' from data/chars/jasmin/cape2.txt
+Cacheing 'cape3' from data/chars/jack/cape3.txt
+Cacheing 'cntfl' from data/chars/misc/cntfl.txt
+Cacheing 'mshbl' from data/chars/jack/jkmsh/mshbl.txt
+Cacheing 'select' from data/chars/chris/select.txt
+Cacheing 'money1' from data/chars/misc/money1.txt
+Cacheing 'money2' from data/chars/misc/money2.txt
+Cacheing 'ammo' from data/chars/misc/ammo.txt
+Cacheing 'hotdog' from data/chars/misc/hotdog.txt
+Cacheing 'bef' from data/chars/misc/bef.txt
+Cacheing 'can' from data/chars/misc/can.txt
+Cacheing 'zupa' from data/chars/misc/zupa.txt
+Cacheing 'barel' from data/chars/misc/barel.txt
+Cacheing 'barelex' from data/chars/misc/barelex.txt
+Cacheing 'expl' from data/chars/misc/expl.txt
+Cacheing 'barelb' from data/chars/misc/barelb.txt
+Cacheing 'bareltr' from data/chars/misc/bareltr.txt
+Cacheing 'barelb2' from data/chars/misc/barelb2.txt
+Cacheing 'shtgun' from data/chars/misc/shtgun.txt
+Cacheing 'mshgun' from data/chars/misc/mshgun.txt
+Cacheing 'chainsaw' from data/chars/misc/chainsaw.txt
+Cacheing 'axe' from data/chars/misc/axe.txt
+Cacheing 'bat' from data/chars/misc/bat.txt
+Cacheing 'grit' from data/chars/misc/grit.txt
+Cacheing 'brl' from data/chars/misc/brl.txt
+Cacheing 'itemr' from data/chars/misc/itemr.txt
+Cacheing 'itemr2' from data/chars/misc/itemr2.txt
+Cacheing 'tomb' from data/chars/misc/tomb.txt
+Cacheing 'kat' from data/chars/kat/kat.txt
+Cacheing 'kat2' from data/chars/kat/kat2.txt
+Cacheing 'kat3' from data/chars/kat/kat3.txt
+Cacheing 'zeye' from data/chars/zombie2/zeye.txt
+Cacheing 'zombie2a' from data/chars/zombie2/zombie2a.txt
+Cacheing 'zombie2' from data/chars/zombie2/zombie2.txt
+Cacheing 'zombie3' from data/chars/zombie3/zombie3.txt
+Cacheing 'were' from data/chars/werewolf/were.txt
+Cacheing 'were1' from data/chars/werewolf/were1.txt
+Cacheing 'were2' from data/chars/werewolf/were2.txt
+Cacheing 'were3' from data/chars/werewolf/were3.txt
+Cacheing 'zombie' from data/chars/zombie/zombie.txt
+Cacheing 'zombiea' from data/chars/zombie/zombiea.txt
+Cacheing 'zombieb' from data/chars/zombie/zombieb.txt
+Cacheing 'ghoul' from data/chars/ghoul/ghoul.txt
+Cacheing 'ghoul3' from data/chars/ghoul/ghoul3.txt
+Cacheing 'jashead' from data/chars/jason/jashead.txt
+Cacheing 'jashead2' from data/chars/jason/jashead2.txt
+Cacheing 'jason' from data/chars/jason/jason.txt
+Cacheing 'jason2' from data/chars/jason/jason2.txt
+Cacheing 'jason3' from data/chars/jason/jason3.txt
+Cacheing 'jason4' from data/chars/jason/jason4.txt
+Cacheing 'dog' from data/chars/dog/dog.txt
+Cacheing 'dog2' from data/chars/dog/dog2.txt
+Cacheing 'ghoul2' from data/chars/ghoul/ghoul2.txt
+Cacheing 'bet' from data/chars/ghoul/bet.txt
+Cacheing 'zombiel' from data/chars/zombie/zombiel.txt
+Cacheing 'werern' from data/chars/werewolf/werern.txt
+Cacheing 'zombiedr' from data/chars/door/zombiedr.txt
+Cacheing 'zombied2' from data/chars/door/zombied2.txt
+Cacheing 'zombie3l' from data/chars/zombie3/zombie3l.txt
+Cacheing 'zomb2bw' from data/chars/zombie2/zomb2bw.txt
+Cacheing 'zomb2bk' from data/chars/zombie2/zomb2bk.txt
+Cacheing 'zombie2l' from data/chars/zombie2/zombie2l.txt
+Cacheing 'docgr3' from data/chars/doc/docgr3.txt
+Cacheing 'docgr2' from data/chars/doc/docgr2.txt
+Cacheing 'docgr1' from data/chars/doc/docgr1.txt
+Cacheing 'docsht' from data/chars/doc/docsht.txt
+Cacheing 'doctor' from data/chars/doc/doc.txt
+Cacheing 'doctor3' from data/chars/doc/doc3.txt
+Cacheing 'mutant' from data/chars/mutant/mutant.txt
+Cacheing 'doctor2' from data/chars/mutant/doc2.txt
+Cacheing 'frrock' from data/chars/franken/frrock.txt
+Cacheing 'franksp' from data/chars/franken/franksp.txt
+Cacheing 'franken' from data/chars/franken/franken.txt
+Cacheing 'franken2' from data/chars/franken/franken2.txt
+Cacheing 'death' from data/chars/death/death.txt
+Cacheing 'death2' from data/chars/death/death2.txt
+Cacheing 'flame' from data/chars/flame/flame.txt
+Cacheing 'flame2' from data/chars/flame/flame2.txt
+Cacheing 'igor' from data/chars/igor/igor.txt
+Cacheing 'zhead4' from data/chars/igor/zhead4.txt
+Cacheing 'drpnt' from data/chars/dracula/drpnt.txt
+Cacheing 'drhnd' from data/chars/dracula/drhnd.txt
+Cacheing 'drfir' from data/chars/dracula/drfir.txt
+Cacheing 'dracula' from data/chars/dracula/dracula.txt
+Cacheing 'dracul2' from data/chars/dracula/dracul2.txt
+Cacheing 'golem1' from data/chars/golem/golem1.txt
+Cacheing 'golem' from data/chars/golem/golem.txt
+Cacheing 'golem2' from data/chars/golem/golem2.txt
+Cacheing 'kargr3' from data/bgs/lv3/kargr3.txt
+Cacheing 'kargr2' from data/bgs/lv3/kargr2.txt
+Cacheing 'kargr1' from data/bgs/lv3/kargr1.txt
+Cacheing 'kar' from data/bgs/lv3/kar.txt
+Cacheing 'pharaon2' from data/chars/pharaon/pharaon2.txt
+Cacheing 'pharaon3' from data/chars/pharaon/pharaon3.txt
+Cacheing 'pharaon4' from data/chars/pharaon/pharaon4.txt
+Cacheing 'pharaon' from data/chars/pharaon/pharaon.txt
+Cacheing 'kfire' from data/chars/knight/kfire.txt
+Cacheing 'knight' from data/chars/knight/knight.txt
+Cacheing 'knight2' from data/chars/knight/knight2.txt
+Cacheing 'bagzb' from data/chars/bags/bagzb.txt
+Cacheing 'bagzb2' from data/chars/bags/bagzb2.txt
+Cacheing 'crows2' from data/chars/crows/crows2.txt
+Cacheing 'crows' from data/chars/crows/crows.txt
+Cacheing 'mutant2' from data/chars/mutant2/mutant2.txt
+Cacheing 'zombie4' from data/chars/zombie4/zombie4.txt
+Cacheing 'zombie4a' from data/chars/zombie4/zombie4a.txt
+Cacheing 'cybfir3' from data/chars/cyborg/cybfir3.txt
+Cacheing 'cybfir2' from data/chars/cyborg/cybfir2.txt
+Cacheing 'cybfir1' from data/chars/cyborg/cybfir1.txt
+Cacheing 'cyborg' from data/chars/cyborg/cyborg.txt
+Cacheing 'cyb2' from data/chars/cyborg/cyb2.txt
+Cacheing 'chsawm' from data/chars/chsawm/chsawm.txt
+Cacheing 'montsp' from data/chars/montezum/montsp.txt
+Cacheing 'montezum' from data/chars/montezum/montezum.txt
+Cacheing 'montezu2' from data/chars/montezum/montezu2.txt
+Cacheing 'mut3bl' from data/chars/mutant3/mut3bl.txt
+Cacheing 'mutant3' from data/chars/mutant3/mutant3.txt
+Cacheing 'werebig' from data/chars/werebig/werebig.txt
+Cacheing 'mutant4' from data/chars/mutant4/mutant4.txt
+Cacheing 'wraith' from data/chars/wraith/wraith.txt
+Cacheing 'aramer' from data/chars/aramer/aramer.txt
+Cacheing 'jsn' from data/bgs/lv1/jsn.txt
+Cacheing 'cnpan' from data/chars/misc/cnpan.txt
+Cacheing 'knsw1' from data/chars/knight/knsw1.txt
+Cacheing 'knsw2' from data/chars/knight/knsw2.txt
+Cacheing 'heli' from data/bgs/lv7/heli.txt
+Cacheing 'helitg' from data/bgs/lv7/helitg.txt
+Cacheing 'plane' from data/bgs/lv6/plane.txt
+Cacheing 'planebg' from data/bgs/lv6/planebg.txt
+Cacheing 'plane2' from data/bgs/lv6/plane2.txt
+Cacheing 'light' from data/chars/bosf/light.txt
+Cacheing 'kar3' from data/bgs/lv3/kar3.txt
+Cacheing 'kar2' from data/bgs/lv3/kar2.txt
+Cacheing 'dra' from data/bgs/lv3/dra.txt
+Cacheing 'igr' from data/bgs/lv3/igr.txt
+Cacheing 'piorun' from data/chars/misc/piorun.txt
+Cacheing 'piorun2' from data/chars/misc/piorun2.txt
+Cacheing 'piorun4' from data/chars/misc/piorun4.txt
+Cacheing 'blood2' from data/chars/misc/blood2.txt
+Cacheing 'bblod2' from data/chars/misc/bblod2.txt
+Cacheing 'lift' from data/bgs/lv2/lift.txt
+Cacheing 'lift2' from data/bgs/lift2/lift2.txt
+Cacheing 'lift2b' from data/bgs/lift2/lift2b.txt
+Cacheing 'lift3' from data/bgs/library/lift3.txt
+Cacheing 'auto' from data/bgs/lv2/auto.txt
+Cacheing 'auto2' from data/bgs/bonus/auto2.txt
+Cacheing 'tlo' from data/bgs/lv2/tlo.txt
+Cacheing 'fog' from data/bgs/lv3/fog.txt
+Cacheing 'fogc1' from data/bgs/lv3/fogc1.txt
+Cacheing 'fogc2' from data/bgs/lv3/fogc2.txt
+Cacheing 'fogc3' from data/bgs/lv3/fogc3.txt
+Cacheing 'gilot2' from data/bgs/lv4/gilot2.txt
+Cacheing 'tlk0a' from data/scenes/demo/tlk0a.txt
+Cacheing 'tlk0b' from data/scenes/demo/tlk0b.txt
+Cacheing 'tlk0c' from data/scenes/demo/tlk0c.txt
+Cacheing 'tlk1' from data/scenes/demo/tlk1.txt
+Cacheing 'tlk2b' from data/scenes/demo/tlk2b.txt
+Cacheing 'tlk3a' from data/scenes/demo/tlk3a.txt
+Cacheing 'tlk3c' from data/scenes/demo/tlk3c.txt
+Cacheing 'tlk3c2' from data/scenes/demo/tlk3c2.txt
+Cacheing 'tlk42' from data/scenes/demo/tlk42.txt
+Cacheing 'tlk4c' from data/scenes/demo/tlk4c.txt
+Cacheing 'tlk5' from data/scenes/demo/tlk5.txt
+Cacheing 'tlk7' from data/scenes/demo/tlk7.txt
+Cacheing 'tlk6c' from data/scenes/demo/tlk6c.txt
+Cacheing 'tlk8a' from data/scenes/demo/tlk8a.txt
+Cacheing 'ex1' from data/chars/sign/ex1.txt
+Cacheing 'expl1' from data/chars/misc/expl1.txt
+Cacheing 'expl2' from data/chars/misc/expl2.txt
+Cacheing 'diody' from data/bgs/library/diody.txt
+Cacheing 'compscr' from data/bgs/library/compscr.txt
+Cacheing 'door' from data/chars/door/door.txt
+Cacheing 'fir' from data/bgs/lv2/fir.txt
+Cacheing 'fir2' from data/bgs/lv8b/fir2.txt
+Cacheing 'fir3' from data/bgs/lv8b/fir3.txt
+Cacheing 'brama' from data/bgs/lv2/brama.txt
+Cacheing 'lab1' from data/bgs/lab/lab1.txt
+Cacheing 'lab2' from data/bgs/lab/lab2.txt
+Cacheing 'lv1p1' from data/bgs/lv1/lv1p1.txt
+Cacheing 'lv1p2' from data/bgs/lv1/lv1p2.txt
+Cacheing 'lv1p' from data/bgs/lv1/lv1p.txt
+Cacheing 'okn' from data/bgs/lv4/okn.txt
+Cacheing 'tar' from data/bgs/lv4c/tar.txt
+Cacheing 'dpln' from data/bgs/lv7a/dpln.txt
+Cacheing 'dpln2' from data/bgs/lv7a/dpln2.txt
+Cacheing 'blb' from data/bgs/lv7c/blb.txt
+Cacheing 'core' from data/bgs/lv8/core.txt
+Cacheing 'stop' from data/chars/stop/stop.txt
+Cacheing 'stop2' from data/chars/stop/stop2.txt
+Cacheing 'stop3' from data/chars/stop/stop3.txt
+Cacheing 'bosslow2' from data/chars/misc/bosslow2.txt
+Cacheing 'bosslow' from data/chars/misc/bosslow.txt
+Cacheing 'lvbegin' from data/chars/misc/lvbegin.txt
+Cacheing 'lvbegin2' from data/chars/misc/lvbegin2.txt
+Cacheing 'lvbegin3' from data/chars/misc/lvbegin3.txt
+Cacheing 'noone' from data/chars/misc/noone.txt
+Cacheing 'noone2' from data/chars/misc/noone2.txt
+Cacheing 'slamfl2' from data/chars/misc/slamfl2.txt
+Cacheing 'end' from data/scenes/end/end.txt
+Cacheing 'jke' from data/scenes/end/jke.txt
+Cacheing 'jsme' from data/scenes/end/jsme.txt
+Cacheing 'chre' from data/scenes/end/chre.txt
+
+Loaded 'Chris' from data/chars/chris/chris.txt 
+Loaded 'bosslow' from data/chars/misc/bosslow.txt 
+Loaded 'bosslow2' from data/chars/misc/bosslow2.txt 
+Loaded 'cape' from data/chars/chris/cape.txt 
+Loaded 'slamfl' from data/chars/chris/slamfl.txt 
+Loaded 'chrspa' from data/chars/bosf/chrspa.txt 
+Loaded 'chrspb' from data/chars/bosf/chrspb.txt 
+Loaded 'chrspc' from data/chars/bosf/chrspc.txt 
+Loaded 'chspmg' from data/chars/chris/chspmg.txt 
+Loaded 'spbg' from data/chars/bosf/spbg.txt 
+Loaded 'chrspd' from data/chars/bosf/chrspd.txt 
+Loaded 'chrspe' from data/chars/bosf/chrspe.txt 
+Loaded 'chris6' from data/chars/chris/chris6.txt 
+Loaded 'axe' from data/chars/misc/axe.txt 
+Loaded 'axeb' from data/chars/misc/axeb.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris6.txt'!
+Loaded 'slamfl2' from data/chars/misc/slamfl2.txt 
+Loaded 'dstfl' from data/chars/bosf/dstfl.txt 
+Loaded 'aura1' from data/chars/misc/aura1.txt 
+Loaded 'aura2' from data/chars/misc/aura2.txt 
+Loaded 'dust' from data/chars/misc/dust.txt 
+Loaded 'dst' from data/chars/misc/dst.txt 
+Loaded 'cntfl' from data/chars/misc/cntfl.txt 
+Loaded 'aura3' from data/chars/misc/aura3.txt 
+Loaded 'select' from data/chars/chris/select.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris.txt'!
+Command 'counterframe' not understood in file 'data/chars/chris/chris.txt'!
+Command 'counterframe' not understood in file 'data/chars/chris/chris.txt'!
+Loaded 'Jack' from data/chars/jack/jack.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack.txt'!
+Command 'counterframe' not understood in file 'data/chars/jack/jack.txt'!
+Command 'counterframe' not understood in file 'data/chars/jack/jack.txt'!
+Loaded 'Jasmin' from data/chars/jasmin/jasmin.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jasmin.txt'!
+Command 'counterframe' not understood in file 'data/chars/jasmin/jasmin.txt'!
+Command 'counterframe' not understood in file 'data/chars/jasmin/jasmin.txt'!
+Loaded 'Chris12' from data/chars/chris/chris12.txt 
+Loaded 'brlknf' from data/chars/chris/chrbrl/brlknf.txt 
+Loaded 'brlknf2' from data/chars/chris/chrbrl/brlknf2.txt 
+Loaded 'brlknf3' from data/chars/chris/chrbrl/brlknf3.txt 
+Loaded 'Chris11' from data/chars/chris/chris11.txt 
+Loaded 'chris2' from data/chars/chris/chris2.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris11.txt'!
+Loaded 'Chris10' from data/chars/chris/chris10.txt 
+Loaded 'Chris8' from data/chars/chris/chris8.txt 
+Loaded 'Chris7' from data/chars/chris/chris7.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris7.txt'!
+Loaded 'Chris6'Loaded 'Chris5' from data/chars/chris/chris5.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris5.txt'!
+Loaded 'Chris4' from data/chars/chris/chris4.txt 
+Loaded 'chris3' from data/chars/chris/chris3.txt 
+Loaded 'shdym' from data/chars/chris/shdym.txt 
+Loaded 'shdym3' from data/chars/chris/shdym3.txt 
+Loaded 'shdym4' from data/chars/chris/shdym4.txt 
+Loaded 'shdym6' from data/chars/chris/shdym6.txt 
+Loaded 'shbul' from data/chars/chris/shbul.txt 
+Loaded 'shbul4' from data/chars/chris/shbul4.txt 
+Loaded 'bblod2' from data/chars/misc/bblod2.txt 
+Loaded 'blood2' from data/chars/misc/blood2.txt 
+Loaded 'shbul6' from data/chars/chris/shbul6.txt 
+Loaded 'shel' from data/chars/misc/shel.txt 
+Command 'counterframe' not understood in file 'data/chars/chris/chris3.txt'!
+Loaded 'Chris2'Loaded 'Jas10' from data/chars/jasmin/jas10.txt 
+Loaded 'jas11' from data/chars/jasmin/jas11.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jas11.txt'!
+Loaded 'jas12' from data/chars/jasmin/jas12.txt 
+Loaded 'Jas8' from data/chars/jasmin/jas8.txt 
+Loaded 'jas7' from data/chars/jasmin/jas7.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jas7.txt'!
+Loaded 'jas6' from data/chars/jasmin/jas6.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jas6.txt'!
+Loaded 'jas5' from data/chars/jasmin/jas5.txt 
+Loaded 'mshbl' from data/chars/jack/jkmsh/mshbl.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jas5.txt'!
+Loaded 'jas4' from data/chars/jasmin/jas4.txt 
+Loaded 'jas3' from data/chars/jasmin/jas3.txt 
+Command 'counterframe' not understood in file 'data/chars/jasmin/jas3.txt'!
+Loaded 'Jas2' from data/chars/jasmin/jas2.txt 
+Loaded 'jack11' from data/chars/jack/jack11.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack11.txt'!
+Loaded 'jack10' from data/chars/jack/jack10.txt 
+Loaded 'jack12' from data/chars/jack/jack12.txt 
+Loaded 'jack8' from data/chars/jack/jack8.txt 
+Loaded 'jack7' from data/chars/jack/jack7.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack7.txt'!
+Loaded 'jack6' from data/chars/jack/jack6.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack6.txt'!
+Loaded 'jack5' from data/chars/jack/jack5.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack5.txt'!
+Loaded 'jack4' from data/chars/jack/jack4.txt 
+Loaded 'jack3' from data/chars/jack/jack3.txt 
+Command 'counterframe' not understood in file 'data/chars/jack/jack3.txt'!
+Loaded 'jack2' from data/chars/jack/jack2.txt 
+Loaded 'flash' from data/chars/misc/flash.txt 
+Loaded 'blood' from data/chars/misc/blood.txt 
+Loaded 'smash' from data/chars/chris/smash.txt 
+Loaded 'smashbg' from data/chars/chris/smashbg.txt 
+Loaded 'blood3' from data/chars/misc/blood3.txt 
+Loaded 'flashe' from data/chars/misc/flashe.txt 
+Loaded 'flashf' from data/chars/misc/flashf.txt 
+Loaded 'bblod' from data/chars/misc/bblod.txt 
+Loaded 'cflash' from data/chars/misc/cflash.txt 
+Loaded 'granat' from data/chars/misc/granat.txt 
+Loaded 'expl' from data/chars/misc/expl.txt 
+Loaded 'blood'Loaded 'blood3'Loaded 'bflash' from data/chars/misc/bflash.txt 
+Loaded 'dflash' from data/chars/misc/dflash.txt 
+Loaded 'dust'Loaded 'zyg' from data/chars/zombie2/zyg.txt 
+Loaded 'zyg2' from data/chars/zombie2/zyg2.txt 
+Loaded 'ztrso' from data/chars/zombie/ztrso.txt 
+Loaded 'zhead' from data/chars/zombie3/zhead.txt 
+Loaded 'zhead3' from data/chars/zombie3/zhead3.txt 
+Loaded 'zhead2' from data/chars/zombie3/zhead2.txt 
+Loaded 'zhead3'Loaded 'zbrain' from data/chars/zombie/zbrain.txt 
+Loaded 'Flash2' from data/chars/misc/flash2.txt 
+Loaded 'dst'Loaded 'dstfl'Loaded 'tdfl' from data/chars/misc/tdfl.txt 
+Loaded 'tdfl2' from data/chars/misc/tdfl2.txt 
+Loaded 'spbg'Loaded 'aura1'Loaded 'aura2'Loaded 'aura3'Loaded 'chspmg'Loaded 'chrspa'Loaded 'chrspb'Loaded 'chrspc'Loaded 'chrspd'Loaded 'chrspe'Loaded 'jkpmg' from data/chars/jack/jkpmg.txt 
+Loaded 'jkspa' from data/chars/bosf/jkspa.txt 
+Loaded 'jkspb' from data/chars/bosf/jkspb.txt 
+Loaded 'jkspb'Loaded 'jkspd' from data/chars/bosf/jkspd.txt 
+Loaded 'jkspe' from data/chars/bosf/jkspe.txt 
+Loaded 'jkspe'Loaded 'jaspmg' from data/chars/jasmin/jaspmg.txt 
+Loaded 'jasspa' from data/chars/bosf/jasspa.txt 
+Loaded 'jasspc' from data/chars/bosf/jasspc.txt 
+Loaded 'jasspb2' from data/chars/bosf/jasspb2.txt 
+Loaded 'jasspc'Loaded 'jasspc2' from data/chars/bosf/jasspc2.txt 
+Loaded 'slamfl'Loaded 'smash'Loaded 'smashbg'Loaded 'shdym'Loaded 'shdym3'Loaded 'shdym4'Loaded 'shdym6'Loaded 'shbul'Loaded 'shbul4'Loaded 'shbul6'Loaded 'shel'Loaded 'batb' from data/chars/misc/batb.txt 
+Loaded 'axeb'Loaded 'brlknf'Loaded 'brlknf2'Loaded 'brlknf3'Loaded 'cape'Loaded 'cape2' from data/chars/jasmin/cape2.txt 
+Loaded 'cape3' from data/chars/jack/cape3.txt 
+Loaded 'cntfl'Loaded 'mshbl'Loaded 'select'Loaded 'money1' from data/chars/misc/money1.txt 
+Loaded 'money2' from data/chars/misc/money2.txt 
+Loaded 'ammo' from data/chars/misc/ammo.txt 
+Loaded 'hotdog' from data/chars/misc/hotdog.txt 
+Loaded 'bef' from data/chars/misc/bef.txt 
+Loaded 'can' from data/chars/misc/can.txt 
+Loaded 'zupa' from data/chars/misc/zupa.txt 
+Loaded 'barel' from data/chars/misc/barel.txt 
+Loaded 'barelex' from data/chars/misc/barelex.txt 
+Loaded 'expl'Loaded 'barelb' from data/chars/misc/barelb.txt 
+Loaded 'bareltr' from data/chars/misc/bareltr.txt 
+Loaded 'barelb2' from data/chars/misc/barelb2.txt 
+Loaded 'shtgun' from data/chars/misc/shtgun.txt 
+Loaded 'mshgun' from data/chars/misc/mshgun.txt 
+Loaded 'chainsaw' from data/chars/misc/chainsaw.txt 
+Loaded 'axe'Loaded 'bat' from data/chars/misc/bat.txt 
+Loaded 'grit' from data/chars/misc/grit.txt 
+Loaded 'brl' from data/chars/misc/brl.txt 
+Loaded 'itemr' from data/chars/misc/itemr.txt 
+Loaded 'itemr2' from data/chars/misc/itemr2.txt 
+Loaded 'tomb' from data/chars/misc/tomb.txt 
+Loaded 'kat' from data/chars/kat/kat.txt 
+Model 'data/chars/kat/kat.txt' has invalid A.I. attack switch: 'movedodge'
+Loaded 'kat2' from data/chars/kat/kat2.txt 
+Model 'data/chars/kat/kat2.txt' has invalid A.I. attack switch: 'movedodge'
+Loaded 'zombie' from data/chars/zombie/zombie.txt 
+Model 'data/chars/zombie/zombie.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'zombie2' from data/chars/zombie2/zombie2.txt 
+Loaded 'zeye' from data/chars/zombie2/zeye.txt 
+Loaded 'zombie3' from data/chars/zombie3/zombie3.txt 
+Model 'data/chars/zombie3/zombie3.txt' has invalid A.I. attack switch: 'dodgemove'
+Model 'data/chars/zombie3/zombie3.txt' has invalid A.I. attack switch: 'dodge'
+Loaded 'kat3' from data/chars/kat/kat3.txt 
+Model 'data/chars/kat/kat3.txt' has invalid A.I. attack switch: 'movedodge'
+Loaded 'zeye'Loaded 'Zombie2a' from data/chars/zombie2/zombie2a.txt 
+Loaded 'Zombie2'Loaded 'Zombie3'Loaded 'were' from data/chars/werewolf/were.txt 
+Loaded 'were1' from data/chars/werewolf/were1.txt 
+Loaded 'tlk0a' from data/scenes/demo/tlk0a.txt 
+Loaded 'were2' from data/chars/werewolf/were2.txt 
+Loaded 'were3' from data/chars/werewolf/were3.txt 
+Loaded 'Zombie'Loaded 'Zombiea' from data/chars/zombie/zombiea.txt 
+Loaded 'Zombieb' from data/chars/zombie/zombieb.txt 
+Loaded 'Ghoul' from data/chars/ghoul/ghoul.txt 
+Model 'data/chars/ghoul/ghoul.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'Ghoul3' from data/chars/ghoul/ghoul3.txt 
+Model 'data/chars/ghoul/ghoul3.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'jashead' from data/chars/jason/jashead.txt 
+Loaded 'jashead2' from data/chars/jason/jashead2.txt 
+Loaded 'jason' from data/chars/jason/jason.txt 
+Model 'data/chars/jason/jason.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'jason2' from data/chars/jason/jason2.txt 
+Model 'data/chars/jason/jason2.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'jason3' from data/chars/jason/jason3.txt 
+Model 'data/chars/jason/jason3.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'zhead4' from data/chars/igor/zhead4.txt 
+
+Loading models...............	Done!
+Object engine init...........	Done!
+Input init...................	X360 Controller (device #0, SDL ID 0) is a game controller.
+Done!
+Create blending tables.......	Done!
+Save settings so far........	Done!
+
+
+
+Warning, an error occurred while playing animated gif file 'data/chars/misc/empty.gif'.
+Level Loading:   'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   631214080 Bytes (   601 MB )
+ Used Ram:    59659776 Bytes (    56 MB )
+
+Loaded 'lv1p' from data/bgs/lv1/lv1p.txt 
+Loaded 'tlk0c' from data/scenes/demo/tlk0c.txt 
+Loaded 'jsn' from data/bgs/lv1/jsn.txt 
+Loaded 'dog' from data/chars/dog/dog.txt 
+Model 'data/chars/dog/dog.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'dog2' from data/chars/dog/dog2.txt 
+Model 'data/chars/dog/dog2.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'stop' from data/chars/stop/stop.txt 
+
+Level Loaded:    'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   628375552 Bytes (   599 MB )
+ Used Ram:    59964416 Bytes (    57 MB )
+Total sprites mapped: 2240
+
+Level Unloading: 'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   627343360 Bytes (   598 MB )
+ Used Ram:    60011520 Bytes (    57 MB )
+
+Unload 'Ghoul3' ............Done.
+Unload 'lv1p' ............Done.
+Unload 'tlk0c' ............Done.
+Unload 'jsn' ............Done.
+Unload 'dog' ............Done.
+Unload 'dog2' ............Done.
+RAM Status:
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   627343360 Bytes (   598 MB )
+ Used Ram:    60011520 Bytes (    57 MB )
+
+Loading control settings.......	Done!
+
+Warning, an error occurred while playing animated gif file 'data/chars/misc/empty.gif'.
+Level Loading:   'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   624365568 Bytes (   595 MB )
+ Used Ram:    60144640 Bytes (    57 MB )
+
+Loaded 'lv1p' from data/bgs/lv1/lv1p.txt 
+Loaded 'tlk0c' from data/scenes/demo/tlk0c.txt 
+Loaded 'jsn' from data/bgs/lv1/jsn.txt 
+Loaded 'Ghoul3' from data/chars/ghoul/ghoul3.txt 
+Model 'data/chars/ghoul/ghoul3.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'dog' from data/chars/dog/dog.txt 
+Model 'data/chars/dog/dog.txt' has invalid A.I. attack switch: 'dodgemove'
+Loaded 'dog2' from data/chars/dog/dog2.txt 
+Model 'data/chars/dog/dog2.txt' has invalid A.I. attack switch: 'dodgemove'
+
+Level Loaded:    'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   623841280 Bytes (   594 MB )
+ Used Ram:    60222976 Bytes (    57 MB )
+Total sprites mapped: 2240
+
+Level Unloading: 'data/levels/lv1.txt'
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   621170688 Bytes (   592 MB )
+ Used Ram:    60268544 Bytes (    57 MB )
+
+Unload 'lv1p' ............Done.
+Unload 'tlk0c' ............Done.
+Unload 'jsn' ............Done.
+Unload 'Ghoul3' ............Done.
+Unload 'dog' ............Done.
+Unload 'dog2' ............Done.
+RAM Status:
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   621170688 Bytes (   592 MB )
+ Used Ram:    60268544 Bytes (    57 MB )
+
+
+************ Shutting Down ************
+
+OpenBOR v3.0 Build 7142 (commit hash: 7f6f175), Compile Date: Jun  5 2024
+Presented by the OpenBOR Team.
+www.chronocrash.com
+OpenBOR is the open source continuation of Beats of Rage by Senile Team.
+
+Special thanks to SEGA and SNK.
+
+Total Ram:  1003073536 Bytes (   956 MB )
+ Free Ram:   620912640 Bytes (   592 MB )
+ Used Ram:    60268544 Bytes (    57 MB )
+
+Release level data...........
+Done!
+
+Release graphics data........	Done!
+Release game data............
+
+Unload 'Chris' ............Done.
+Unload 'bosslow' ............Done.
+Unload 'bosslow2' ............Done.
+Unload 'cape' ............Done.
+Unload 'slamfl' ............Done.
+Unload 'chrspa' ............Done.
+Unload 'chrspb' ............Done.
+Unload 'chrspc' ............Done.
+Unload 'chspmg' ............Done.
+Unload 'spbg' ............Done.
+Unload 'chrspd' ............Done.
+Unload 'chrspe' ............Done.
+Unload 'Chris6' ............Done.
+Unload 'axe' ............Done.
+Unload 'axeb' ............Done.
+Unload 'slamfl2' ............Done.
+Unload 'dstfl' ............Done.
+Unload 'aura1' ............Done.
+Unload 'aura2' ............Done.
+Unload 'dust' ............Done.
+Unload 'dst' ............Done.
+Unload 'cntfl' ............Done.
+Unload 'aura3' ............Done.
+Unload 'select' ............Done.
+Unload 'Jack' ............Done.
+Unload 'Jasmin' ............Done.
+Unload 'Chris12' ............Done.
+Unload 'brlknf' ............Done.
+Unload 'brlknf2' ............Done.
+Unload 'brlknf3' ............Done.
+Unload 'Chris11' ............Done.
+Unload 'Chris2' ............Done.
+Unload 'Chris10' ............Done.
+Unload 'Chris8' ............Done.
+Unload 'Chris7' ............Done.
+Unload 'Chris5' ............Done.
+Unload 'Chris4' ............Done.
+Unload 'chris3' ............Done.
+Unload 'shdym' ............Done.
+Unload 'shdym3' ............Done.
+Unload 'shdym4' ............Done.
+Unload 'shdym6' ............Done.
+Unload 'shbul' ............Done.
+Unload 'shbul4' ............Done.
+Unload 'bblod2' ............Done.
+Unload 'blood2' ............Done.
+Unload 'shbul6' ............Done.
+Unload 'shel' ............Done.
+Unload 'Jas10' ............Done.
+Unload 'jas11' ............Done.
+Unload 'jas12' ............Done.
+Unload 'Jas8' ............Done.
+Unload 'jas7' ............Done.
+Unload 'jas6' ............Done.
+Unload 'jas5' ............Done.
+Unload 'mshbl' ............Done.
+Unload 'jas4' ............Done.
+Unload 'jas3' ............Done.
+Unload 'Jas2' ............Done.
+Unload 'jack11' ............Done.
+Unload 'jack10' ............Done.
+Unload 'jack12' ............Done.
+Unload 'jack8' ............Done.
+Unload 'jack7' ............Done.
+Unload 'jack6' ............Done.
+Unload 'jack5' ............Done.
+Unload 'jack4' ............Done.
+Unload 'jack3' ............Done.
+Unload 'jack2' ............Done.
+Unload 'flash' ............Done.
+Unload 'blood' ............Done.
+Unload 'smash' ............Done.
+Unload 'smashbg' ............Done.
+Unload 'blood3' ............Done.
+Unload 'flashe' ............Done.
+Unload 'flashf' ............Done.
+Unload 'bblod' ............Done.
+Unload 'cflash' ............Done.
+Unload 'granat' ............Done.
+Unload 'expl' ............Done.
+Unload 'bflash' ............Done.
+Unload 'dflash' ............Done.
+Unload 'zyg' ............Done.
+Unload 'zyg2' ............Done.
+Unload 'ztrso' ............Done.
+Unload 'zhead' ............Done.
+Unload 'zhead3' ............Done.
+Unload 'zhead2' ............Done.
+Unload 'zbrain' ............Done.
+Unload 'Flash2' ............Done.
+Unload 'tdfl' ............Done.
+Unload 'tdfl2' ............Done.
+Unload 'jkpmg' ............Done.
+Unload 'jkspa' ............Done.
+Unload 'jkspb' ............Done.
+Unload 'jkspd' ............Done.
+Unload 'jkspe' ............Done.
+Unload 'jaspmg' ............Done.
+Unload 'jasspa' ............Done.
+Unload 'jasspc' ............Done.
+Unload 'jasspb2' ............Done.
+Unload 'jasspc2' ............Done.
+Unload 'batb' ............Done.
+Unload 'cape2' ............Done.
+Unload 'cape3' ............Done.
+Unload 'money1' ............Done.
+Unload 'money2' ............Done.
+Unload 'ammo' ............Done.
+Unload 'hotdog' ............Done.
+Unload 'bef' ............Done.
+Unload 'can' ............Done.
+Unload 'zupa' ............Done.
+Unload 'barel' ............Done.
+Unload 'barelex' ............Done.
+Unload 'barelb' ............Done.
+Unload 'bareltr' ............Done.
+Unload 'barelb2' ............Done.
+Unload 'shtgun' ............Done.
+Unload 'mshgun' ............Done.
+Unload 'chainsaw' ............Done.
+Unload 'bat' ............Done.
+Unload 'grit' ............Done.
+Unload 'brl' ............Done.
+Unload 'itemr' ............Done.
+Unload 'itemr2' ............Done.
+Unload 'tomb' ............Done.
+Unload 'kat' ............Done.
+Unload 'kat2' ............Done.
+Unload 'Zombie' ............Done.
+Unload 'Zombie2' ............Done.
+Unload 'zeye' ............Done.
+Unload 'Zombie3' ............Done.
+Unload 'kat3' ............Done.
+Unload 'Zombie2a' ............Done.
+Unload 'were' ............Done.
+Unload 'were1' ............Done.
+Unload 'tlk0a' ............Done.
+Unload 'were2' ............Done.
+Unload 'were3' ............Done.
+Unload 'Zombiea' ............Done.
+Unload 'Zombieb' ............Done.
+Unload 'Ghoul' ............Done.
+Unload 'jashead' ............Done.
+Unload 'jashead2' ............Done.
+Unload 'jason' ............Done.
+Unload 'jason2' ............Done.
+Unload 'jason3' ............Done.
+Unload 'zhead4' ............Done.
+Unload 'stop' ............Done.
+
+Release game data............	Done!
+Release timer................	Done!
+Release input hardware.......	Done!
+Release sound system.........	Done!
+Release FileCaching System...	Done!
+
+**************** Done *****************
+
+OpenBOR v3.0 Build 7142 (commit hash: 7f6f175), Compile Date: Jun  5 2024
+Presented by the OpenBOR Team.
+www.chronocrash.com
+OpenBOR is the open source continuation of Beats of Rage by Senile Team.
+
+Special thanks to SEGA and SNK.
+

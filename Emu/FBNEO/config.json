@@ -1,0 +1,22 @@
+{
+"label":"FBNEO",
+"icon": "/mnt/SDCARD/Themes/SPRUCE/icons/arcade.png",
+"iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/arcade.png",
+"launch":"launch_performance.sh",
+"rompath":"../../Roms/FBNEO",
+"imgpath":"../../Roms/FBNEO/Imgs",
+"useswap":1,
+"shortname":1,
+"hidebios":1,
+"extlist":"zip",
+    "launchlist": [
+        {
+            "name": "FBNEO Performance Mode",
+            "launch": "launch_performance.sh"
+        },
+        {
+            "name": "FBNEO",
+            "launch": "launch.sh"
+        }
+    ]
+}

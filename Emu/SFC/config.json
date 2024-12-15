@@ -1,0 +1,30 @@
+{
+    "label":"SNES",
+    "icon": "/mnt/SDCARD/Themes/SPRUCE/icons/sfc.png",
+    "iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/sfc.png",
+    "launch":"launch.sh",
+    "rompath":"../../Roms/SFC",
+    "imgpath":"../../Roms/SFC/Imgs",
+    "useswap":0,
+    "shortname":0,
+    "hidebios":0,
+    "extlist":"smc|fig|sfc|gd3|gd7|dx2|bsx|swc|zip",
+    "launchlist": [
+        {
+            "name": "Snes9x2005",
+            "launch": "launch.sh"
+        },
+        {
+            "name": "Snes9x2005 Plus",
+            "launch": "launch_snes9x2005_plus.sh"
+        },
+        {
+            "name": "Snes9x2010",
+            "launch": "launch_snes9x2010.sh"
+        },
+        {
+            "name": "Snes9x Latest",
+            "launch": "launch_snes9x.sh"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "label":"GB",
+    "icon": "/mnt/SDCARD/Themes/SPRUCE/icons/gb.png",
+    "iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/gb.png",
+    "launch":"launch.sh",
+    "rompath":"../../Roms/GB",
+    "imgpath":"../../Roms/GB/Imgs",
+    "useswap":0,
+    "shortname":0,
+    "hidebios":0,
+    "extlist":"gb|gbc|zip",
+    "launchlist": [
+        {
+            "name": "GamBatte",
+            "launch": "launch.sh"
+        },
+        {
+            "name": "mGBA",
+            "launch": "launch_mgba.sh"
+        }
+    ]
+}

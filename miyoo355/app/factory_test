@@ -1,0 +1,5 @@
+#!/bin/sh
+
+touch "/mnt/SDCARD/we_have_liftoff"
+
+/media/sdcard0/miyoo355/app/MainUI

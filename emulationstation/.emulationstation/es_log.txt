@@ -1,0 +1,30 @@
+Nov 15 09:04:43 lvl2: 	EmulationStation - v2.12.0rp-dev, built Nov 16 2024 - 14:16:37
+Nov 15 09:04:44 lvl2: 	Parsing XML file "/mnt/sdcard/emulationstation/resources/mamenames.xml"...
+Nov 15 09:04:44 lvl2: 	Parsing XML file "/mnt/sdcard/emulationstation/resources/mamebioses.xml"...
+Nov 15 09:04:44 lvl2: 	Parsing XML file "/mnt/sdcard/emulationstation/resources/mamedevices.xml"...
+Nov 15 09:04:44 lvl2: 	Creating window...
+Nov 15 09:04:44 lvl2: 	Created window successfully.
+Nov 15 09:04:44 lvl2: 	GL vendor:   ARM
+Nov 15 09:04:44 lvl2: 	GL renderer: Mali-G52
+Nov 15 09:04:44 lvl2: 	GL version:  OpenGL ES 3.2 v1.g13p0-01eac0.24befa5913d9dcd8262eb352180ccb16
+Nov 15 09:04:44 lvl2: 	Checking available OpenGL extensions...
+Nov 15 09:04:44 lvl2: 	 ARB_texture_non_power_of_two: MISSING
+Nov 15 09:04:44 lvl2: 	Loading system config file /mnt/sdcard/emulationstation/.emulationstation/es_systems.cfg...
+Nov 15 09:04:45 lvl1: 	  Unknown platform for system "sfc" (platform "sfc" from list "sfc")
+Nov 15 09:04:45 lvl2: 	Parsing XML file "/mnt/sdcard/emulationstation/.emulationstation/gamelists/mastersystem/gamelist.xml"...
+Nov 15 09:04:45 lvl1: 	System "atari2600" has no games! Ignoring it.
+Nov 15 09:04:45 lvl1: 	Error - folder with path "/media/sdcard0/Roms/atari7800" is not a directory!
+Nov 15 09:04:45 lvl1: 	System "atari7800" has no games! Ignoring it.
+Nov 15 09:04:46 lvl1: 	Error - folder with path "/media/sdcard0/Roms/fbahack" is not a directory!
+Nov 15 09:04:46 lvl1: 	System "fbneo" has no games! Ignoring it.
+Nov 15 09:04:46 lvl1: 	  Unknown platform for system "mame" (platform "mame" from list "mame")
+Nov 15 09:04:46 lvl0: 	System "ppsspp" is missing name, path, extension, or command!
+Nov 15 09:04:46 lvl1: 	Error - folder with path "/media/sdcard0/Roms/WSC" is not a directory!
+Nov 15 09:04:46 lvl1: 	System "wsc" has no games! Ignoring it.
+Nov 15 09:04:51 lvl2: 	Added known joystick 'Xbox 360 Controller' (instance ID: 0, device index: 0)
+Nov 15 09:04:52 lvl2: 	Added known joystick 'Xbox 360 Controller' (instance ID: 0, device index: 0)
+Nov 15 09:05:06 lvl2: 	 req sound [basic.back]
+Nov 15 09:05:06 lvl2: 	   (missing)
+Nov 15 09:05:08 lvl2: 	 req sound [basic.back]
+Nov 15 09:05:08 lvl2: 	   (missing)
+Nov 15 09:06:50 lvl2: 	EmulationStation cleanly shutting down.

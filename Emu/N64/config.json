@@ -1,0 +1,21 @@
+{
+    "label":"N64",
+    "icon": "/mnt/SDCARD/Themes/SPRUCE/icons/n64.png",
+    "iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/n64.png",
+    "launch":"launch.sh",
+    "rompath":"../../Roms/N64",
+    "imgpath":"../../Roms/N64/Imgs",
+    "useswap":1,
+    "shortname":0,
+    "hidebios":1,
+    "launchlist": [
+        {
+            "name": "Mupen64Plus",
+            "launch": "launch.sh"
+        },
+        {
+            "name": "Parellel N64",
+            "launch": "launch_paralleln64.sh"
+        }
+    ]
+}

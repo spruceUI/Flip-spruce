@@ -1,0 +1,7 @@
+{
+"package":"com.retroarch.dummy",
+"label":"RetroArch",
+"icon":"/mnt/SDCARD/Themes/SPRUCE/icons/App/retroarch.png",
+"launch":"launch.sh",
+"description":"Boot RetroArch"
+}

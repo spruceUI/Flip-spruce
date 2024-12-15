@@ -1,0 +1,11 @@
+{
+"label":"FAKE08",
+"icon": "/mnt/SDCARD/Themes/SPRUCE/icons/pico.png",
+"iconsel": "/mnt/SDCARD/Themes/SPRUCE/icons/sel/pico.png",
+"launch":"launch.sh",
+"rompath":"../../Roms/FAKE08",
+"imgpath":"../../Roms/FAKE08/Imgs",
+"useswap":1,
+"shortname":0,
+"hidebios":1
+}

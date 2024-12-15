@@ -1,0 +1,6 @@
+{
+    "label":"File Management",
+    "icon":"/mnt/SDCARD/Themes/SPRUCE/icons/App/file.png",
+    "launch":"DinguxCommander.sh",
+    "description":"Ninoh english version"
+}

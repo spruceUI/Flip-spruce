@@ -1,0 +1,6 @@
+{
+    "label":"Pico8",
+    "icon":"/mnt/SDCARD/Themes/SPRUCE/icons/App/pico8.png",
+    "launch":"launch.sh",
+    "description":"Pico8 splore standalone"
+}
