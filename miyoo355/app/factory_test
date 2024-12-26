@@ -2,4 +2,7 @@
 
 touch "/mnt/SDCARD/we_have_liftoff"
 
+# uncomment to test if this works to hide usb mode??
+# mount --bind /mnt/SDCARD/.gitkeep /usr/miyoo/apps/usb_mass_storage/config.json
+
 /media/sdcard0/miyoo355/app/MainUI
