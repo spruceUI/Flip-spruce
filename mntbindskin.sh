@@ -17,7 +17,7 @@ if [ ! -d "$TARGET" ]; then
 fi
 
 # Perform the bind mount
-mount --bind "$SOURCE" "$TARGET"
+mount --bind $SOURCE $TARGET
 
 # Check if the mount was successful
 if [ $? -eq 0 ]; then
