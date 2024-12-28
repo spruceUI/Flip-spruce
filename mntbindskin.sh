@@ -1,5 +1,9 @@
 #!/bin/sh
 
+## maybe just use this one line in runtime??
+## mount --bind /mnt/SDCARD/Themes/SPRUCE/skin /usr/miyoo/bin/skin
+
+
 # Define the source and target directories for the bind mount
 SOURCE="/mnt/SDCARD/Themes/SPRUCE/skin"
 TARGET="/usr/miyoo/bin/skin"
