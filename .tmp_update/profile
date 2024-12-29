@@ -1,0 +1,35 @@
+#!/bin/sh
+
+export PATH="/mnt/SDCARD/.tmp_update/bin:${PATH}"
+
+if [ "$PS1" ]; then
+  if [ "$BASH" ]; then
+    # The file bash.bashrc already sets the default PS1.
+    # PS1='\h:\w\$ '
+    if [ -f /etc/bash.bashrc ]; then
+      . /etc/bash.bashrc
+    fi
+  else
+    if [ "`id -u`" -eq 0 ]; then
+      PS1='# '
+    else
+      PS1='$ '
+    fi
+  fi
+fi
+
+
+
+
+#export LD_LIBRARY_PATH="/mnt/SDCARD/miyoo/lib:${LD_LIBRARY_PATH}"
+#export HOME=$(grep -e "^${USER:-root}:" /etc/passwd | cut -d ":" -f 6)
+#export HOME=${HOME:-/root}
+#export PS1='\u@\h:\w\$ '
+
+[ -x /bin/ll ] || alias ll='ls -lha'
+
+
+#alias temp="cat /sys/devices/virtual/thermal/thermal_zone0/temp"
+#alias govern="cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
+#alias speed="cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq && cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor"
+            echo $(($(cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq)/1000))Mhz Governor:  $(cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor)
