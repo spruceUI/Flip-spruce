@@ -1,3 +1,2 @@
 #!/bin/sh
-/mnt/SDCARD/.tmp_update/runtime.sh
-
+/mnt/SDCARD/.tmp_update/updater
