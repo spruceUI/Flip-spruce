@@ -1,185 +1,205 @@
 #!/bin/sh
 
-# mnt "/mnt/SDCARD/spruce/scripts/whte_rbt.obj"
-# >access security
-# access: PERMISSION DENIED.
-# >access security grid
-# access: PERMISSION DENIED.
-# >access main security grid
-# access: PERMISSION DENIED.
+#Cambios en los leds
+echo mmc1 > /sys/devices/platform/leds/leds/work/trigger 
+echo battery-charging-blink-full-solid > /sys/devices/platform/leds/leds/charger/trigger 
 
-. /mnt/SDCARD/spruce/scripts/helperFunctions.sh
-. /mnt/SDCARD/spruce/scripts/runtimeHelper.sh
-rotate_logs
+#motor
+echo -n 0 > /sys/class/gpio/gpio20/value
+sleep 0.05
+echo -n 1 > /sys/class/gpio/gpio20/value
+sleep 0.05
+echo -n 0 > /sys/class/gpio/gpio20/value
 
-# Resetting log file location
-log_file="/mnt/SDCARD/Saves/spruce/spruce.log"
-
-cores_online &
-echo mmc0 >/sys/devices/platform/sunxi-led/leds/led1/trigger
-echo L,L2,R,R2,X,A,B,Y > /sys/module/gpio_keys_polled/parameters/button_config
-SETTINGS_FILE="/config/system.json"
-SWAPFILE="/mnt/SDCARD/cachefile"
-SDCARD_PATH="/mnt/SDCARD"
-SCRIPTS_DIR="${SDCARD_PATH}/spruce/scripts"
-BIN_DIR="${SDCARD_PATH}/spruce/bin"
-
-export SYSTEM_PATH="${SDCARD_PATH}/miyoo"
-export PATH="$SYSTEM_PATH/app:${PATH}"
-export LD_LIBRARY_PATH="$SYSTEM_PATH/lib:${LD_LIBRARY_PATH}"
-export HOME="${SDCARD_PATH}"
-export HELPER_FUNCTIONS="/mnt/SDCARD/spruce/scripts/helperFunctions.sh"
-
-# Create directories and mount in parallel
-(
-    mkdir -p /var/lib/alsa
-    mount -o bind "/mnt/SDCARD/miyoo/var/lib" /var/lib &
-    mount -o bind /mnt/SDCARD/miyoo/app /usr/miyoo/app &
-    mount -o bind /mnt/SDCARD/miyoo/lib /usr/miyoo/lib &
-    mount -o bind /mnt/SDCARD/miyoo/res /usr/miyoo/res &
-    mount -o bind "/mnt/SDCARD/miyoo/etc/profile" /etc/profile &
-    wait
-)
-
-lcd_init 1
-
-# Stop NTPD
-nice -n -18 sh -c '/etc/init.d/sysntpd stop && /etc/init.d/ntpd stop' > /dev/null 2>&1 &
-
-# Flag cleanup
-flag_remove "themeChanged"
-flag_remove "log_verbose"
-flag_remove "low_battery"
-flag_remove "in_menu"
-flag_remove "emufresh"
-
-if flag_check "forced_shutdown"; then
-    flag_remove "forced_shutdown"
-    setting_update "skip_shutdown_confirm" off
+CUSTOMER1_DIR=/media/sdcard0/miyoo355/
+CUSTOMER2_DIR=/media/sdcard1/miyoo355/
+export CUSTOMER_DIR=${CUSTOMER1_DIR}
+if [ -d ${CUSTOMER2_DIR} ]   ; then
+  export CUSTOMER_DIR=${CUSTOMER2_DIR}
 fi
 
-log_message " " -v
-log_message "---------Starting up---------"
-log_message " " -v
+EE1_DIR=/media/sdcard0/emulationstation
+EE2_DIR=/media/sdcard1/emulationstation
+export EE_DIR=${EE1_DIR}
+if [ -d ${EE2_DIR} ]   ; then
+  export EE_DIR=${EE2_DIR}
+fi
+echo CUSTOMER_DIR is $CUSTOMER_DIR, EE_DIR is $EE_DIR> /tmp/runee.log
 
-# import multipass.cfg and start watchdog for new network additions via MainUI
-nice -n 15 ${SCRIPTS_DIR}/wpa_watchdog.sh > /dev/null &
+#cambiamos el /etc/profile para tener las rutas PATH personalizadas desde adb o ssh
+mount -o bind "/mnt/SDCARD/spruce/scripts/profile" /etc/profile
+#montamos overlay de carpeta root para cambios pseudopermanentes
+mount -o bind "/mnt/SDCARD/spruce/root" /root
+mount -o bind "/mnt/SDCARD/spruce/scripts/power-key.sh" /usr/bin/power-key.sh
 
-# Check if WiFi is enabled
-wifi=$(grep '"wifi"' /config/system.json | awk -F ':' '{print $2}' | tr -d ' ,')
-if [ "$wifi" -eq 0 ]; then
-    touch /tmp/wifioff && killall -9 wpa_supplicant && killall -9 udhcpc && rfkill
-    log_message "WiFi turned off"
+killall -9 keymon
+
+echo 1 > /sys/class/backlight/backlight/brightness
+
+echo 0 > /proc/sys/kernel/printk
+
+chmod a+x /usr/bin/notify
+
+/mnt/SDCARD/spruce/scripts/autoRA.sh
+
+${CUSTOMER_DIR}/app/keymon /dev/input/event5 &
+${CUSTOMER_DIR}/app/keymon /dev/input/event0 &
+${CUSTOMER_DIR}/app/keymon /dev/input/event1 &
+input-event-daemon /dev/input/event2
+
+
+killprocess(){
+   pid=`ps | grep $1 | grep -v grep | cut -d' ' -f3`
+   kill -9 $pid
+}
+
+runifnecessary(){
+    cnt=0
+    #a=`ps | grep $1 | grep -v grep`
+    a=`pgrep $1`
+    while [ "$a" == "" ] && [ $cnt -lt 8 ] ; do 
+	   echo try to run $2 `cat /proc/uptime`
+	   $2 $3 &
+           sleep 0.5
+	   cnt=`expr $cnt + 1`
+           a=`pgrep $1`
+    done
+}
+
+export LD_LIBRARY_PATH=/usr/miyoo/lib
+
+
+#motor
+echo 20 > /sys/class/gpio/export
+echo -n out > /sys/class/gpio/gpio20/direction
+echo -n 0 > /sys/class/gpio/gpio20/value
+# sleep 0.05
+# echo -n 1 > /sys/class/gpio/gpio20/value
+# sleep 0.05
+# echo -n 0 > /sys/class/gpio/gpio20/value
+
+#wait for sdcard mounted
+#mounted=`cat /proc/mounts | grep sdcard`
+#cnt=0
+#/usr/bin/fbdisplay /usr/miyoo/bin/skin/icon-wait-tf-card.png &
+#while [ "$mounted" == "" ] && [ $cnt -lt 8 ] ; do
+#   echo "wait for sdcard $cnt $mounted"
+#   sleep 0.5
+#   cnt=`expr $cnt + 1`
+#   mounted=`cat /proc/mounts | grep SDCARD`
+#done
+
+touch /tmp/fbdisplay_exit
+
+echo "before wifi module " `cat /proc/uptime`
+#insmod /system/lib/modules/RTL8189FU.ko
+echo "after wifi module " `cat /proc/uptime`
+
+#joypad
+echo -1 > /sys/class/miyooio_chr_dev/joy_type
+#keyboard
+#echo 0 > /sys/class/miyooio_chr_dev/joy_type
+
+sleep 0.1
+hdmipugin=`cat /sys/class/drm/card0-HDMI-A-1/status`
+if [ "$hdmipugin" == "connected" ] ; then
+    /usr/bin/fbdisplay /usr/miyoo/bin/skin_1080p/app_loading_bg.png &
 else
-    touch /tmp/wifion
-    log_message "WiFi turned on"
+    /usr/bin/fbdisplay /usr/miyoo/bin/skin/app_loading_bg.png &
 fi
 
-killall -9 main ### SUPER important in preventing .tmp_update suicide
+mkdir -p /tmp/miyoo_inputd
 
-# Bring up network and services
-${SCRIPTS_DIR}/wifi_watchdog.sh > /dev/null &
-
-# Check for first_boot flag and run ThemeUnpacker accordingly
-if flag_check "first_boot"; then
-    ${SCRIPTS_DIR}/ThemeUnpacker.sh --silent &
-    log_message "ThemeUnpacker started silently in background due to firstBoot flag"
-else
-    ${SCRIPTS_DIR}/ThemeUnpacker.sh
+factory_test_mode=0
+if [ -f /media/sdcard0/factory_test_mode ] || [ -f /media/sdcard0/pcba_test_mode ] ; then
+    factory_test_mode=0
+elif [ -f /media/sdcard1/factory_test_mode ] || [ -f /media/sdcard1/pcba_test_mode ] ; then
+    factory_test_mode=0
 fi
 
-{
-    ${SCRIPTS_DIR}/romdirpostrofix.sh
-    ${SCRIPTS_DIR}/emufresh_md5_multi.sh
-} &
-
-alsactl nrestore &
-
-# Restore and monitor brightness
-if [ -f "/mnt/SDCARD/spruce/settings/sys_brightness_level" ]; then
-    BRIGHTNESS=$(cat /mnt/SDCARD/spruce/settings/sys_brightness_level)
-    # only set non zero brightness value
-    if [ $BRIGHTNESS -ne 0 ]; then 
-        echo ${BRIGHTNESS} > /sys/devices/virtual/disp/disp/attr/lcdbl
-    fi
+miyoo_fw_update=0
+miyoo_fw_dir=/media/sdcard0
+if [ -f /media/sdcard0/miyoo355_fw.img ] ; then
+    miyoo_fw_update=1
+    miyoo_fw_dir=/media/sdcard0
+elif [ -f /media/sdcard1/miyoo355_fw.img ] ; then
+    miyoo_fw_update=1
+    miyoo_fw_dir=/media/sdcard1
 fi
 
-
-# ensure keymon is running first and only listen to event3 for keyboard events
-#keymon /dev/input/event3 &
-# load watchdog for auto adjustment of brightness and volume when hotkey is using
-#${SCRIPTS_DIR}/vb_watchdog.sh > /dev/null &
-
-# listen hotkeys for brightness adjustment, volume buttons and power button
-${SCRIPTS_DIR}/buttons_watchdog.sh &
-${SCRIPTS_DIR}/powerbutton_watchdog.sh &
-
-# rename ttyS0 to ttyS2 so that PPSSPP cannot read the joystick raw data
-mv /dev/ttyS0 /dev/ttyS2
-
-# create virtual joypad from keyboard input, it should create /dev/input/event4 system file
-cd ${BIN_DIR}
-./joypad /dev/input/event3 &
-
-# read joystick raw data from serial input and apply calibration,
-# then send analog input to /dev/input/event4 when in ANALOG_MODE (this is default)
-# and send keyboard input to /dev/input/event3 when in KEYBOARD_MODE.
-# Please send kill signal USR1 to switch to ANALOG_MODE
-# and send kill signal USR2 to switch to KEYBOARD_MODE
-${SCRIPTS_DIR}/autoReloadCalibration.sh &
-
-# run game switcher watchdog before auto load game is loaded
-${SCRIPTS_DIR}/homebutton_watchdog.sh &
-
-# start watchdog for konami code
-${SCRIPTS_DIR}/simple_mode_watchdog.sh &
-
-# don't hide or unhide apps in simple_mode
-if ! flag_check "simple_mode"; then
-    check_and_handle_firmware_app &
-    check_and_hide_update_app &
+if [ ${miyoo_fw_update} -eq 1 ] ; then
+echo "============== MIYOO FW update ==============="
+export LD_LIBRARY_PATH=${CUSTOMER_DIR}/lib 
+cd $miyoo_fw_dir
+/usr/miyoo/apps/fw_update/miyoo_fw_update
 fi
 
-check_and_move_p8_bins # don't background because we want the display call to block so the user knows it worked (right?)
+while [ 1 ]; do
+  runee=`/usr/miyoo/bin/jsonval runee`
+  if [ "$runee" == "1" ] && [ -f ${EE_DIR}/emulationstation ] && [ -f ${EE_DIR}/emulationstation.sh ] ; then
+      cd ${EE_DIR}
+      ./emulationstation.sh
+      runee=`/usr/miyoo/bin/jsonval runee`
+      echo runee $runee  >> /tmp/runee.log
+  else      
+      #exit 0
+      #echo 600000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
-${SCRIPTS_DIR}/low_power_warning.sh &
+      svrrunned=0
 
-# Load idle monitors before game resume or MainUI
-${SCRIPTS_DIR}/applySetting/idlemon_mm.sh &
+      SDRUNNED=0
+      if [ -d ${CUSTOMER_DIR} ]   ; then
+        export LD_LIBRARY_PATH=${CUSTOMER_DIR}/lib 
+        
+        echo run sdcard app LD_LIBRARY_PATH is ${LD_LIBRARY_PATH} `cat /proc/uptime`
+        #runifnecessary "keymon" ${CUSTOMER_DIR}/app/keymon 
+        runifnecessary "miyoo_inputd" ${CUSTOMER_DIR}/app/miyoo_inputd   
 
-# check whether to auto-resume into a game
-if flag_check "save_active"; then
-    ${SCRIPTS_DIR}/autoRA.sh  &> /dev/null
-    log_message "Auto Resume executed"
-else
-	log_message "Auto Resume skipped (no save_active flag)"
-fi
+        echo run sdcard app `cat /proc/uptime`
+        cd ${CUSTOMER_DIR}/app/
+        if [ ${factory_test_mode} -eq 1 ] ; then
+            ${CUSTOMER_DIR}/app/factory_test
+        else
+            ${CUSTOMER_DIR}/app/MainUI
+        fi
 
-${SCRIPTS_DIR}/autoIconRefresh.sh &
+        if [ $? -eq 0 ] ; then
+            SDRUNNED=1
+        else
+            SDRUNNED=0
+        fi
+      fi
 
-# check whether to run first boot procedure
-if flag_check "first_boot"; then
-    "${SCRIPTS_DIR}/firstboot.sh"
-else
-    log_message "First boot procedures skipped"
-fi
+      if [ ${SDRUNNED} -eq 0 ] ; then
+        export LD_LIBRARY_PATH=/usr/miyoo/lib
+        echo run app LD_LIBRARY_PATH is ${LD_LIBRARY_PATH} `cat /proc/uptime`   
+        #runifnecessary "keymon" /usr/miyoo/bin/keymon
+        runifnecessary "miyoo_inputd" /usr/miyoo/bin/miyoo_inputd
 
-swapon -p 40 "${SWAPFILE}"
+        echo run internal app `cat /proc/uptime`
+        cd /usr/miyoo/bin/
+        if [ ${factory_test_mode} -eq 1 ] ; then
+            /usr/miyoo/bin/factory_test
+        else
+            ${CUSTOMER_DIR}app/MainUI
+        fi
 
-# Run scripts for initial setup
-#${SCRIPTS_DIR}/forcedisplay.sh
-${SCRIPTS_DIR}/ffplay_is_now_media.sh &
-${SCRIPTS_DIR}/checkfaves.sh &
-${SCRIPTS_DIR}/credits_watchdog.sh &
-developer_mode_task &
-update_checker &
+      fi #[ ${SDRUNNED} -eq 0 ] 
 
-# Initialize CPU settings
-scaling_min_freq=1008000 ### default value, may be overridden in specific script
-set_smart
 
-update_notification
+      if [ -f /tmp/.cmdenc ] ; then                                                                                   
+          /root/gameloader                                                                                             
+      elif [ -f /tmp/cmd_to_run.sh ] ; then
+         touch /tmp/miyoo_inputd/enable_turbo_input
+         chmod a+x /tmp/cmd_to_run.sh
+         /tmp/cmd_to_run.sh                                                                                           
+         rm /tmp/cmd_to_run.sh
+         rm /tmp/miyoo_inputd/enable_turbo_input
+	     echo game finished
+      fi
 
-# start main loop
-log_message "Starting main loop"
-${SCRIPTS_DIR}/principal.sh
+      #turn off motor in case app crash
+  fi
+
+done
+
